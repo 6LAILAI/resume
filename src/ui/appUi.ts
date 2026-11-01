@@ -1034,12 +1034,26 @@ export function bindAppUi(
   const studioBar = document.querySelector<HTMLElement>('#studio-bar')
   const studioToggleBtn = document.querySelector<HTMLButtonElement>('#studio-toggle')
 
-  // 右上角统一控制台：把建造模式 / 作品展台 / 世界控制台 收进一处，触发原有逻辑
+  // 右上角统一控制台：建造模式 / 文字履历 / json履历 / github开源 / 世界控制台
   const trBuildBtn = document.querySelector<HTMLButtonElement>('#tr-build')
-  const trShowcaseBtn = document.querySelector<HTMLButtonElement>('#tr-showcase')
+  const trTextBtn = document.querySelector<HTMLButtonElement>('#tr-text')
+  const trJsonBtn = document.querySelector<HTMLButtonElement>('#tr-json')
+  const trGithubBtn = document.querySelector<HTMLButtonElement>('#tr-github')
   const trConsoleBtn = document.querySelector<HTMLButtonElement>('#tr-console')
   trBuildBtn?.addEventListener('click', () => openCustomizeBtn?.click())
-  trShowcaseBtn?.addEventListener('click', () => openShowcaseBtn?.click())
+  trTextBtn?.addEventListener('click', () => openListBtn?.click())
+  trJsonBtn?.addEventListener('click', async () => {
+    const json = serializeProfileJson(config)
+    try {
+      await navigator.clipboard.writeText(json)
+      showToast('✅ 已复制 JSON 履历到剪贴板')
+    } catch {
+      showToast('⚠️ 复制失败，可到「建造模式 → 导入 / 导出 JSON」手动复制')
+    }
+  })
+  trGithubBtn?.addEventListener('click', () =>
+    window.open('https://github.com/6LAILAI/lailai-3d-island', '_blank', 'noopener'),
+  )
   trConsoleBtn?.addEventListener('click', () => studioToggleBtn?.click())
 
   const panelEl = document.querySelector<HTMLElement>('#panel')!

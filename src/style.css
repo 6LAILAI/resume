@@ -3202,7 +3202,9 @@ body.island-immersive-fullscreen .landscape-fullscreen-fab {
 
 /* 收起左上角重复的入口，统一到右上面板 */
 #open-customize,
-#open-showcase-btn {
+#open-showcase-btn,
+#open-list,
+#link-github {
   display: none !important;
 }
 
