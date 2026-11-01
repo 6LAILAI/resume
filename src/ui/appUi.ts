@@ -1042,15 +1042,7 @@ export function bindAppUi(
   const trConsoleBtn = document.querySelector<HTMLButtonElement>('#tr-console')
   trBuildBtn?.addEventListener('click', () => openCustomizeBtn?.click())
   trTextBtn?.addEventListener('click', () => openListBtn?.click())
-  trJsonBtn?.addEventListener('click', async () => {
-    const json = serializeProfileJson(config)
-    try {
-      await navigator.clipboard.writeText(json)
-      showToast('✅ 已复制 JSON 履历到剪贴板')
-    } catch {
-      showToast('⚠️ 复制失败，可到「建造模式 → 导入 / 导出 JSON」手动复制')
-    }
-  })
+  trJsonBtn?.addEventListener('click', () => openShowcaseBtn?.click())
   trGithubBtn?.addEventListener('click', () =>
     window.open('https://github.com/6LAILAI/lailai-3d-island', '_blank', 'noopener'),
   )
