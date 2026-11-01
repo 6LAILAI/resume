@@ -1123,7 +1123,7 @@ export function bindAppUi(
     if (!isTourActive) return
     isTourActive = false
     if (guidedTourBtn) {
-      guidedTourBtn.textContent = '环岛导览'
+      guidedTourBtn.textContent = '认识来来'
       guidedTourBtn.classList.remove('tour-active')
     }
     if (!silent) {
