@@ -935,7 +935,7 @@ export function openCustomBuildingGuideModal(defaultKind: PlaceKind = 'career'):
                 <li>🌍 <strong>全套个人数字名片交付</strong>：开箱即部署到 Vercel / GitHub Pages / 自定义域名。</li>
               </ul>
               <div class="custom-guide-actions">
-                <a href="https://github.com/6LAILAI/lailai-3d-island/issues/new" target="_blank" rel="noopener noreferrer" class="btn-primary custom-guide-link">💬 在 GitHub 提交定制需求 ↗</a>
+                <a href="https://github.com/6LAILAI/lailai.github.io/issues/new" target="_blank" rel="noopener noreferrer" class="btn-primary custom-guide-link">💬 在 GitHub 提交定制需求 ↗</a>
                 <a href="https://github.com/6LAILAI" target="_blank" rel="noopener noreferrer" class="btn-secondary custom-guide-link">👤 联系作者 (@6LAILAI) ↗</a>
               </div>
             </section>
@@ -1044,7 +1044,7 @@ export function bindAppUi(
   trTextBtn?.addEventListener('click', () => openListBtn?.click())
   trJsonBtn?.addEventListener('click', () => openShowcaseBtn?.click())
   trGithubBtn?.addEventListener('click', () =>
-    window.open('https://github.com/6LAILAI/lailai-3d-island', '_blank', 'noopener'),
+    window.open('https://github.com/6LAILAI/lailai.github.io', '_blank', 'noopener'),
   )
   trConsoleBtn?.addEventListener('click', () => studioToggleBtn?.click())
 

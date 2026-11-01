@@ -133,7 +133,7 @@
    - 点击「**📋 一键复制 AI 建模 Prompt**」；
    - 将复制好的 Prompt 直接发给打开了本仓库的 **Claude Code / Cursor / Windsurf / Codex**，AI 会严格按照本仓库的 [`src/schema/profile.ts`](./src/schema/profile.ts) 与 [`src/scene/buildings.ts`](./src/scene/buildings.ts) 规范，为你自动编写参数化 Three.js 3D 模型、挂载四角步道灯与悬浮晶锥，并注册进建造图鉴！
 3. **通道 B — 联系作者定制**：
-   - 如果你不熟悉本地开发环境，可直接点击弹窗内的 **[💬 提交定制需求 Issue](https://github.com/6LAILAI/lailai-3d-island/issues/new?title=%5BCustom+3D+Building%5D+%E7%94%B3%E8%AF%B7%E5%AE%9A%E5%88%B6%E4%B8%93%E5%B1%9E+3D+%E5%BB%BA%E7%AD%91&body=%E6%88%91%E6%83%B3%E5%AE%9A%E5%88%B6%E7%9A%84%E6%AF%8D%E6%A0%A1%2F%E4%BC%81%E4%B8%9A%E5%90%8D%E7%A7%B0%EF%BC%9A%0A%E5%BB%BA%E7%AD%91%E5%8F%82%E8%80%83%E7%89%B9%E5%BE%81%E6%88%96%E5%9B%BE%E7%89%87%EF%BC%9A)** 或联系作者主页 [`@6LAILAI`](https://github.com/6LAILAI)。
+   - 如果你不熟悉本地开发环境，可直接点击弹窗内的 **[💬 提交定制需求 Issue](https://github.com/6LAILAI/lailai.github.io/issues/new?title=%5BCustom+3D+Building%5D+%E7%94%B3%E8%AF%B7%E5%AE%9A%E5%88%B6%E4%B8%93%E5%B1%9E+3D+%E5%BB%BA%E7%AD%91&body=%E6%88%91%E6%83%B3%E5%AE%9A%E5%88%B6%E7%9A%84%E6%AF%8D%E6%A0%A1%2F%E4%BC%81%E4%B8%9A%E5%90%8D%E7%A7%B0%EF%BC%9A%0A%E5%BB%BA%E7%AD%91%E5%8F%82%E8%80%83%E7%89%B9%E5%BE%81%E6%88%96%E5%9B%BE%E7%89%87%EF%BC%9A)** 或联系作者主页 [`@6LAILAI`](https://github.com/6LAILAI)。
 
 ---
 
