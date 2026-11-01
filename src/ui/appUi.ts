@@ -68,7 +68,7 @@ export function escapeHtml(raw: string): string {
 }
 
 export function formatNameWithAccentDot(name: string): string {
-  const trimmed = String(name || 'Alex Rivera').replace(/\.+$/, '')
+  const trimmed = String(name || '来来').replace(/\.+$/, '')
   return `${escapeHtml(trimmed)}<span class="dot">.</span>`
 }
 
@@ -609,28 +609,28 @@ const GENERIC_SHOWCASE_DEMOS = [
     key: 'ai-builder',
     label: '01 · AI 产品 Builder',
     shortLabel: '01 AI Builder',
-    title: '3D Island Studio · AI 产品 Builder 作品展台与 JSON 配置蓝图',
+    title: '来来的 3D 岛屿 · AI 产品 Builder 作品展台与 JSON 配置蓝图',
     url: '/demos/generic-showcase/index.html?template=ai-builder',
   },
   {
     key: 'creative-designer',
     label: '02 · 创意技术设计师',
     shortLabel: '02 创意设计师',
-    title: '3D Island Studio · 创意技术设计师 作品展台与 JSON 配置蓝图',
+    title: '来来的 3D 岛屿 · 创意技术设计师 作品展台与 JSON 配置蓝图',
     url: '/demos/generic-showcase/index.html?template=creative-designer',
   },
   {
     key: 'indie-founder',
     label: '03 · 出海独立创客',
     shortLabel: '03 独立创客',
-    title: '3D Island Studio · 出海独立创客 作品展台与 JSON 配置蓝图',
+    title: '来来的 3D 岛屿 · 出海独立创客 作品展台与 JSON 配置蓝图',
     url: '/demos/generic-showcase/index.html?template=indie-founder',
   },
   {
     key: 'research-scholar',
     label: '04 · 前沿科研学者',
     shortLabel: '04 科研学者',
-    title: '3D Island Studio · 前沿科研学者 作品展台与 JSON 配置蓝图',
+    title: '来来的 3D 岛屿 · 前沿科研学者 作品展台与 JSON 配置蓝图',
     url: '/demos/generic-showcase/index.html?template=research-scholar',
   },
 ] as const
@@ -702,7 +702,7 @@ export function openDemoPreviewModal(demoUrl: string, customTitle?: string): voi
   const matched = GENERIC_SHOWCASE_DEMOS.find((d) => demoUrl.includes(d.key) || d.url === demoUrl)
   const resolvedUrl = matched?.url ?? demoUrl
   const iframeUrl = resolvedUrl
-  const resolvedTitle = customTitle ?? matched?.title ?? '3D Island Studio · Interactive Showcase'
+  const resolvedTitle = customTitle ?? matched?.title ?? '来来的 3D 岛屿 · Interactive Showcase'
   const titleEl = modal.querySelector('#demo-preview-title')
   if (titleEl) titleEl.textContent = resolvedTitle
   const extLink = modal.querySelector('#demo-preview-ext') as HTMLAnchorElement | null
@@ -935,8 +935,8 @@ export function openCustomBuildingGuideModal(defaultKind: PlaceKind = 'career'):
                 <li>🌍 <strong>全套个人数字名片交付</strong>：开箱即部署到 Vercel / GitHub Pages / 自定义域名。</li>
               </ul>
               <div class="custom-guide-actions">
-                <a href="https://github.com/jasonz-ai/3d-island/issues/new?title=%5BCustom+3D+Building%5D+%E7%94%B3%E8%AF%B7%E5%AE%9A%E5%88%B6%E4%B8%93%E5%B1%9E+3D+%E5%BB%BA%E7%AD%91%E6%88%96%E4%B8%AA%E4%BA%BA%E5%B2%9B%E5%B1%BF" target="_blank" rel="noopener noreferrer" class="btn-primary custom-guide-link">💬 在 GitHub 提交定制需求 ↗</a>
-                <a href="https://github.com/jasonz-ai" target="_blank" rel="noopener noreferrer" class="btn-secondary custom-guide-link">👤 联系作者 (@jasonz-ai) ↗</a>
+                <a href="https://github.com/6LAILAI/lailai-3d-island/issues/new" target="_blank" rel="noopener noreferrer" class="btn-primary custom-guide-link">💬 在 GitHub 提交定制需求 ↗</a>
+                <a href="https://github.com/6LAILAI" target="_blank" rel="noopener noreferrer" class="btn-secondary custom-guide-link">👤 联系作者 (@6LAILAI) ↗</a>
               </div>
             </section>
           </div>
@@ -963,7 +963,7 @@ export function openCustomBuildingGuideModal(defaultKind: PlaceKind = 'career'):
   const updatePromptText = () => {
     const targetName = nameInput.value.trim() || '我的专属地标建筑'
     const targetFeat = featInput.value.trim() || '标志性主楼轮廓、屋顶立体发光徽标与前坪景观细节'
-    promptArea.value = `请在当前 3D Island Studio 仓库中为我新增一款专属 3D 建筑母型：
+    promptArea.value = `请在当前 来来的 3D 岛屿 仓库中为我新增一款专属 3D 建筑母型：
 1. 建筑名称：「${targetName}」，所属分类：${kindLabel}
 2. 视觉与结构特征：${targetFeat}
 3. 修改文件契约：
@@ -1325,6 +1325,10 @@ export function bindAppUi(
 
   function renderHeroQuickStrip(): void {
     if (!heroQuickStrip) return
+    if (GENERIC_PERSONA_PRESETS.length === 0) {
+      heroQuickStrip.style.display = 'none'
+      return
+    }
     heroQuickStrip.innerHTML = ''
     const labelEl = createEl('span', 'hero-quick-label', '✦ 预设模板：')
     heroQuickStrip.appendChild(labelEl)
@@ -2748,7 +2752,7 @@ export function bindAppUi(
     const templateKey = matchedPreset?.id ?? 'ai-builder'
     openDemoPreviewModal(
       `/demos/generic-showcase/index.html?template=${templateKey}`,
-      `3D Island Studio · ${matchedPreset?.label ?? '作品展台与 JSON 配置蓝图'}`,
+      `来来的 3D 岛屿 · ${matchedPreset?.label ?? '作品展台与 JSON 配置蓝图'}`,
     )
   })
 
@@ -2838,7 +2842,7 @@ export function bindAppUi(
       summary: '在这里填写作品的核心亮点与交互价值。',
       boothStyle: boothOpt.id,
       tag: 'AI Product',
-      link: 'https://github.com/jasonz-ai',
+      link: 'https://github.com/6LAILAI',
     })
     applyConfigChange(true)
   })

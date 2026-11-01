@@ -1,8 +1,8 @@
 {
-  "name": "3d-island-studio",
+  "name": "lailai-3d-island",
   "version": "1.0.0",
   "private": false,
-  "description": "3D Island Studio · 千人千世界的 3D 个人主页生成器 — Low-poly Three.js interactive 3D portfolio & resume world builder with Sims-style 3D build mode, 4 biomes, 6 topologies, 5 realm carriers, and 37 procedural 3D buildings.",
+  "description": "来来（lailai）的 3D 交互个人主页 — Low-poly Three.js interactive 3D portfolio & resume world built on 3d-island (MIT).",
   "keywords": [
     "threejs",
     "webgl",
@@ -10,14 +10,14 @@
     "personal-website",
     "interactive-resume",
     "low-poly",
-    "isometric-island",
+    "lailai",
     "typescript",
     "vite"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jasonz-ai/3d-island.git"
+    "url": "https://github.com/6LAILAI/lailai-3d-island.git"
   },
   "type": "module",
   "scripts": {
