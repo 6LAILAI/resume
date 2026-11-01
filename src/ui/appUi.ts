@@ -1372,7 +1372,8 @@ export function bindAppUi(
     const timeMeta = TIME_OF_DAY_OPTIONS.find((t) => t.id === (config.timeOfDay ?? 'day'))
     const timeSuffix = timeMeta && timeMeta.id !== 'day' ? ` · ${timeMeta.short}` : ''
     badgeEl.textContent = `${palette.terrain.label} · ${palette.realm.label}${timeSuffix}`
-    nameEl.innerHTML = formatNameWithAccentDot(config.name)
+    // 标题按红色批注要求排为两行：在 " / " 处断行（仅影响首屏标题，不改原始 name 数据）
+    nameEl.innerHTML = formatNameWithAccentDot(config.name).replace(' / ', '<br>/ ')
     taglineEl.textContent = config.tagline
     ghLink.href = config.github
     if (liLink) liLink.href = config.linkedin

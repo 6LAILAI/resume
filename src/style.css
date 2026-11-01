@@ -213,13 +213,15 @@ body:not(.has-selection) #labels.labels-intro-peek .label:not(.carrier-label) {
 }
 
 .intro h1 {
-  font-family: var(--serif);
-  letter-spacing: -0.02em;
+  /* 思源黑体（黑体）优先，回退到系统中文字体 */
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", "Hiragino Sans GB", sans-serif;
+  letter-spacing: -0.01em;
   margin: 0;
   font-size: clamp(28px, 3vw, 38px);
-  font-weight: 600;
-  line-height: 1.06;
-  white-space: nowrap;
+  font-weight: 700;
+  line-height: 1.18;
+  white-space: normal;
+  max-width: 16em;
 }
 
 .intro .dot {
