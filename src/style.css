@@ -1545,7 +1545,7 @@ body.dark-sky:not(.has-selection) .share-pill:hover {
 
 .visitor-exit-btn {
   position: fixed;
-  top: 20px;
+  top: 74px;
   right: 22px;
   z-index: 6;
   background: rgba(28, 31, 26, 0.86);
@@ -1569,6 +1569,15 @@ body.dark-sky:not(.has-selection) .share-pill:hover {
 .visitor-exit-btn[hidden],
 .share-toast[hidden] {
   display: none;
+}
+
+/* 窄屏 dock 会换行变高，退出按钮改到底部右下角，避免与 dock 重叠 */
+@media (max-width: 640px) {
+  .visitor-exit-btn {
+    top: auto;
+    bottom: 18px;
+    right: 14px;
+  }
 }
 
 .share-toast {
