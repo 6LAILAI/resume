@@ -6,8 +6,8 @@
   --accent: #e8643a;
   --roof: #3a3f36;
   --line: #ded8ca;
-  --sans: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
-  --serif: "Iowan Old Style", "Palatino Linotype", "Songti SC", "Noto Serif CJK SC", Georgia, serif;
+  --sans: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", system-ui, sans-serif;
+  --serif: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", Georgia, sans-serif;
 }
 
 * {
@@ -213,8 +213,8 @@ body:not(.has-selection) #labels.labels-intro-peek .label:not(.carrier-label) {
 }
 
 .intro h1 {
-  /* 思源黑体（黑体）优先，回退到系统中文字体 */
-  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", "Hiragino Sans GB", sans-serif;
+  /* 思源黑体（Noto Sans SC）优先 */
+  font-family: var(--sans);
   letter-spacing: -0.01em;
   margin: 0;
   font-size: clamp(28px, 3vw, 38px);
@@ -2621,7 +2621,7 @@ body.visitor-mode .island-onboarding-card {
   padding: 44px 52px;
   box-shadow: 0 18px 48px rgba(28, 31, 26, 0.08);
   color: #18181b;
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family: "Noto Sans SC", "Source Han Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
 .resume-sheet-header {
@@ -2639,7 +2639,7 @@ body.visitor-mode .island-onboarding-card {
 }
 
 .resume-sheet-name {
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif !important;
+  font-family: "Noto Sans SC", "Source Han Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif !important;
   font-size: 28px !important;
   font-weight: 800 !important;
   letter-spacing: 0.04em;
@@ -2686,7 +2686,7 @@ body.visitor-mode .island-onboarding-card {
 }
 
 .resume-section-title {
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif !important;
+  font-family: "Noto Sans SC", "Source Han Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif !important;
   font-size: 15.5px !important;
   font-weight: 800 !important;
   color: #111827 !important;

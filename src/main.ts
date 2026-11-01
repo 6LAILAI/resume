@@ -1,4 +1,8 @@
 import './style.css'
+import '@fontsource/noto-sans-sc/400.css'
+import '@fontsource/noto-sans-sc/500.css'
+import '@fontsource/noto-sans-sc/600.css'
+import '@fontsource/noto-sans-sc/700.css'
 import { defaultProfile } from './data/defaultProfile'
 import { GENERIC_PERSONA_PRESETS } from './data/personaPresets'
 import {
