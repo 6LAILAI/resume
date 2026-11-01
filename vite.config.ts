@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/lailai.github.io/',
+  base: '/resume/',
   server: {
     port: 5173,
   },

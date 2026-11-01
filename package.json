@@ -1,5 +1,5 @@
 {
-  "name": "lailai.github.io",
+  "name": "resume",
   "version": "1.0.0",
   "private": false,
   "description": "来来（lailai）的 3D 交互个人主页 — Low-poly Three.js interactive 3D portfolio & resume world built on 3d-island (MIT).",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/6LAILAI/lailai.github.io.git"
+    "url": "https://github.com/6LAILAI/resume.git"
   },
   "type": "module",
   "scripts": {
