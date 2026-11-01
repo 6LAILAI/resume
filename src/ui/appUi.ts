@@ -1034,6 +1034,14 @@ export function bindAppUi(
   const studioBar = document.querySelector<HTMLElement>('#studio-bar')
   const studioToggleBtn = document.querySelector<HTMLButtonElement>('#studio-toggle')
 
+  // 右上角统一控制台：把建造模式 / 作品展台 / 世界控制台 收进一处，触发原有逻辑
+  const trBuildBtn = document.querySelector<HTMLButtonElement>('#tr-build')
+  const trShowcaseBtn = document.querySelector<HTMLButtonElement>('#tr-showcase')
+  const trConsoleBtn = document.querySelector<HTMLButtonElement>('#tr-console')
+  trBuildBtn?.addEventListener('click', () => openCustomizeBtn?.click())
+  trShowcaseBtn?.addEventListener('click', () => openShowcaseBtn?.click())
+  trConsoleBtn?.addEventListener('click', () => studioToggleBtn?.click())
+
   const panelEl = document.querySelector<HTMLElement>('#panel')!
   const panelBody = document.querySelector<HTMLElement>('#panel .panel-body')!
   const panelClose = document.querySelector<HTMLButtonElement>('#panel .close')!

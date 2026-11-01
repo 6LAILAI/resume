@@ -3158,5 +3158,74 @@ body.island-immersive-fullscreen .landscape-fullscreen-fab {
   }
 }
 
+/* ===== 右上角统一控制台（建造模式 / 作品展台 / 世界控制台） ===== */
+.topright-dock {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+  max-width: calc(100vw - 44px);
+  padding: 6px;
+  background: rgba(250, 248, 243, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(222, 216, 202, 0.85);
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(28, 31, 26, 0.06);
+}
+
+.topright-dock .dock-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid rgba(28, 31, 26, 0.15);
+  border-radius: 999px;
+  padding: 5px 11px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.topright-dock .dock-pill:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* 收起左上角重复的入口，统一到右上面板 */
+#open-customize,
+#open-showcase-btn {
+  display: none !important;
+}
+
+/* 收起态的世界控制台隐藏，由右上角按钮驱动；展开时下移避免遮挡 */
+.studio-bar.collapsed {
+  display: none !important;
+}
+.studio-bar {
+  top: 76px;
+}
+
+body.dark-sky:not(.has-selection) .topright-dock {
+  background: rgba(18, 27, 46, 0.78);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+body.dark-sky:not(.has-selection) .topright-dock .dock-pill {
+  color: #f5f5f2;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+body.dark-sky:not(.has-selection) .topright-dock .dock-pill:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 
 
