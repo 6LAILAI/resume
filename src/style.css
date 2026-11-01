@@ -1042,7 +1042,9 @@ body.has-selection .hint {
 
 .list-body article h3 {
   margin: 0 0 4px;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .list-body article .role {
