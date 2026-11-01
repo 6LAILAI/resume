@@ -2760,6 +2760,10 @@ export function bindAppUi(
   listClose.addEventListener('click', () => {
     listEl.hidden = true
   })
+  // 点击弹窗外的遮罩区域关闭
+  listEl.addEventListener('click', (e) => {
+    if (e.target === listEl) listEl.hidden = true
+  })
   openShowcaseBtn?.addEventListener('click', () => {
     stopGuidedTour(true)
     soundFx.playSelectChime()
