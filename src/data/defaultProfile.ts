@@ -6,7 +6,7 @@ import type { ProfileConfig } from '../schema/profile'
 export const defaultProfile: ProfileConfig = {
   name: '来来 · AI 绘画教练 / 畅销书作者',
   tagline:
-    '21 年设计老兵 · AI 畅销书作者 · 生财有术航海家 · 点击建筑看履历，乘火箭升空前往第二秘境看代表作',
+    '4 本 AI 畅销书的作者 · 知名企业/高校 AI 讲师 · 创办电商设计公司 13 年 · 创办 AI 漫剧公司 1 年',
   github: 'https://github.com/6LAILAI',
   linkedin: '',
   biome: 'ocean',
