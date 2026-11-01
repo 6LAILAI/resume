@@ -2451,25 +2451,28 @@ export function bindAppUi(
     listBody.innerHTML = ''
 
     // Generic Template Mode List View with Persona Switcher
-    const personaBar = createEl('div', 'resume-action-bar no-print')
-    const pStrip = createEl('div', 'resume-demo-pills')
-    pStrip.appendChild(createEl('span', 'resume-demo-label', '✦ 切换通用人设模板：'))
-    for (const preset of GENERIC_PERSONA_PRESETS) {
-      const btn = createEl(
-        'button',
-        `resume-demo-pill ${config.name === preset.profile.name ? 'active' : ''}`,
-        preset.shortLabel,
-      )
-      btn.type = 'button'
-      btn.addEventListener('click', () => {
-        config = structuredClone(preset.profile)
-        soundFx.playSelectChime()
-        applyConfigChange(false)
-      })
-      pStrip.appendChild(btn)
+    // 来来的个人站点不提供通用职业人设模板切换（GENERIC_PERSONA_PRESETS 为空），与首屏快速条保持一致：为空则不渲染该横条
+    if (GENERIC_PERSONA_PRESETS.length > 0) {
+      const personaBar = createEl('div', 'resume-action-bar no-print')
+      const pStrip = createEl('div', 'resume-demo-pills')
+      pStrip.appendChild(createEl('span', 'resume-demo-label', '✦ 切换通用人设模板：'))
+      for (const preset of GENERIC_PERSONA_PRESETS) {
+        const btn = createEl(
+          'button',
+          `resume-demo-pill ${config.name === preset.profile.name ? 'active' : ''}`,
+          preset.shortLabel,
+        )
+        btn.type = 'button'
+        btn.addEventListener('click', () => {
+          config = structuredClone(preset.profile)
+          soundFx.playSelectChime()
+          applyConfigChange(false)
+        })
+        pStrip.appendChild(btn)
+      }
+      personaBar.appendChild(pStrip)
+      listBody.appendChild(personaBar)
     }
-    personaBar.appendChild(pStrip)
-    listBody.appendChild(personaBar)
 
     listBody.appendChild(createEl('h1', undefined, config.name))
     listBody.appendChild(createEl('p', undefined, config.tagline))
